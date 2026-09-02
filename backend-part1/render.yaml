@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: gamma-x-unified-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: DHAN_CLIENT_ID
+        sync: false
+      - key: DHAN_ACCESS_TOKEN
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: CLIENT_CODE
+        sync: false
+      - key: PIN
+        sync: false
+      - key: TOTP_SECRET
+        sync: false
+      - key: VAPID_PUBLIC_KEY
+        sync: false
+      - key: VAPID_PRIVATE_KEY
+        sync: false
+      - key: VAPID_SUBJECT
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: DEEP_DEPTH_SYMBOL
+        value: "BANKNIFTY_FUT"

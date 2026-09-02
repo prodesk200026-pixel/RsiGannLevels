@@ -1,0 +1,20 @@
+{
+  "name": "gamma-x-unified-backend",
+  "version": "1.0.0",
+  "description": "Unified Gamma X backend - Dhan live data, order flow, GEX/hidden Greeks, signals - serves all Gamma X PWA frontends",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "engines": { "node": ">=18.0.0" },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "axios": "^1.7.2",
+    "ws": "^8.17.0",
+    "web-push": "^3.6.7",
+    "node-cron": "^3.0.3"
+  }
+}
